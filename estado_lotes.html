@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <link
+ rel="stylesheet"
+ href="http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css"
+ />
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+ <link
+ rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+ />
+
+ <title>SLIN - REPORTES GRAFICOS - AYBAR</title>
+ <style>
+ .contenedor {
+ text-align: center;
+ }
+
+ .contenedor h1 { 
+ margin: 20px 0;
+ font-size: 30px;
+ }
+
+ .bloque_proyecto h2 { 
+ font-size: 27px;
+ font-weight: bold;
+ }
+
+ .bloque_proyecto h2 span { 
+ font-size: 20px;
+ }
+ </style>
+ </head>
+ <body>
+
+ <div class="contenedor">
+ <h1>GRUPO AYBAR - ESTADO DE LOTES POR MANZANA SEGUN LA ETAPA DEL PROYECTO</h1>
+
+ <div class="bloque_proyecto">
+<h2>CIUDAD DIAGONAL</h2>
+<div>
+<h3>Etapa 1<br>T: <b>728</b>, D: <b style="color: #4CAF50">303</b>, V: <b style="color: #2196F3">425</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-1bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>570</b>, D: <b style="color: #4CAF50">378</b>, V: <b style="color: #2196F3">192</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-1bar2-chart"></div>
+</div>
+<div>
+<h3>Etapa 3<br>T: <b>551</b>, D: <b style="color: #4CAF50">429</b>, V: <b style="color: #2196F3">122</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-1bar3-chart"></div>
+</div>
+<div>
+<h3>Etapa 4<br>T: <b>873</b>, D: <b style="color: #4CAF50">625</b>, V: <b style="color: #2196F3">248</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-1bar4-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>FINCA MONTECARLO</h2>
+<div>
+<h3>Etapa 1<br>T: <b>17</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">17</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-2bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>86</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">86</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-2bar2-chart"></div>
+</div>
+<div>
+<h3>Etapa 3<br>T: <b>83</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">83</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-2bar3-chart"></div>
+</div>
+<div>
+<h3>Etapa 4<br>T: <b>301</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">301</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-2bar4-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>GROCIO PRADO</h2>
+<div>
+<h3>Etapa 1<br>T: <b>114</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">114</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-3bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>LAGOON CENTER</h2>
+<div>
+<h3>Etapa 1<br>T: <b>1771</b>, D: <b style="color: #4CAF50">1569</b>, V: <b style="color: #2196F3">202</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-4bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>PRAGA VILLAGE</h2>
+<div>
+<h3>Etapa 1<br>T: <b>283</b>, D: <b style="color: #4CAF50">84</b>, V: <b style="color: #2196F3">199</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-5bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>10</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">10</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-5bar2-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>RIVERA DEL CAMPO </h2>
+<div>
+<h3>Etapa 1<br>T: <b>40</b>, D: <b style="color: #4CAF50">1</b>, V: <b style="color: #2196F3">38</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-6bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA PORTON </h2>
+<div>
+<h3>Etapa 1<br>T: <b>400</b>, D: <b style="color: #4CAF50">306</b>, V: <b style="color: #2196F3">94</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-7bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>URBAN RESIDENCIAL</h2>
+<div>
+<h3>Etapa 1<br>T: <b>685</b>, D: <b style="color: #4CAF50">147</b>, V: <b style="color: #2196F3">5</b>, S: <b style="color: #FFC107">423</b>, B: <b style="color: #F44336">108</b></h3>
+<div id="morris-8bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA PRIVADA BALANDRA </h2>
+<div>
+<h3>Etapa 1<br>T: <b>475</b>, D: <b style="color: #4CAF50">410</b>, V: <b style="color: #2196F3">0</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">65</b></h3>
+<div id="morris-9bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA PRIVADA COSTA VERDE</h2>
+<div>
+<h3>Etapa 1<br>T: <b>604</b>, D: <b style="color: #4CAF50">496</b>, V: <b style="color: #2196F3">1</b>, S: <b style="color: #FFC107">23</b>, B: <b style="color: #F44336">84</b></h3>
+<div id="morris-10bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA PRIVADA VIDANTA</h2>
+<div>
+<h3>Etapa 1<br>T: <b>498</b>, D: <b style="color: #4CAF50">424</b>, V: <b style="color: #2196F3">0</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">74</b></h3>
+<div id="morris-11bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA DEL PALMAR</h2>
+<div>
+<h3>Etapa 1<br>T: <b>580</b>, D: <b style="color: #4CAF50">469</b>, V: <b style="color: #2196F3">2</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">109</b></h3>
+<div id="morris-12bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>VILLA ENCANTADA</h2>
+<div>
+<h3>Etapa 1<br>T: <b>588</b>, D: <b style="color: #4CAF50">498</b>, V: <b style="color: #2196F3">2</b>, S: <b style="color: #FFC107">5</b>, B: <b style="color: #F44336">83</b></h3>
+<div id="morris-13bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>CAMTABRIA</h2>
+</div>
+<div class="bloque_proyecto">
+<h2></h2>
+</div>
+<div class="bloque_proyecto">
+<h2>GREEN VIEW</h2>
+<div>
+<h3>Etapa 1<br>T: <b>814</b>, D: <b style="color: #4CAF50">532</b>, V: <b style="color: #2196F3">282</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-16bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>4</b>, D: <b style="color: #4CAF50">0</b>, V: <b style="color: #2196F3">4</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-16bar2-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>JUMEIRAH LAKE</h2>
+<div>
+<h3>Etapa 1<br>T: <b>1901</b>, D: <b style="color: #4CAF50">1296</b>, V: <b style="color: #2196F3">605</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-17bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>LA CALERA</h2>
+<div>
+<h3>Etapa 1<br>T: <b>1235</b>, D: <b style="color: #4CAF50">275</b>, V: <b style="color: #2196F3">960</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-18bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>LA RESERVA DE HUARAL</h2>
+<div>
+<h3>Etapa 1<br>T: <b>1145</b>, D: <b style="color: #4CAF50">664</b>, V: <b style="color: #2196F3">481</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-19bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>824</b>, D: <b style="color: #4CAF50">706</b>, V: <b style="color: #2196F3">117</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-19bar2-chart"></div>
+</div>
+<div>
+<h3>Etapa 3<br>T: <b>767</b>, D: <b style="color: #4CAF50">604</b>, V: <b style="color: #2196F3">163</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-19bar3-chart"></div>
+</div>
+<div>
+<h3>Etapa 4<br>T: <b>719</b>, D: <b style="color: #4CAF50">543</b>, V: <b style="color: #2196F3">176</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-19bar4-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>LACHAY VIEW</h2>
+<div>
+<h3>Etapa 1<br>T: <b>960</b>, D: <b style="color: #4CAF50">265</b>, V: <b style="color: #2196F3">695</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-20bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>521</b>, D: <b style="color: #4CAF50">236</b>, V: <b style="color: #2196F3">285</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-20bar2-chart"></div>
+</div>
+<div>
+<h3>Etapa 3<br>T: <b>550</b>, D: <b style="color: #4CAF50">244</b>, V: <b style="color: #2196F3">306</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-20bar3-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2></h2>
+</div>
+<div class="bloque_proyecto">
+<h2>LAGOON VILLAGE</h2>
+<div>
+<h3>Etapa 1<br>T: <b>685</b>, D: <b style="color: #4CAF50">55</b>, V: <b style="color: #2196F3">630</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-22bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>LUGO</h2>
+<div>
+<h3>Etapa 1<br>T: <b>514</b>, D: <b style="color: #4CAF50">187</b>, V: <b style="color: #2196F3">326</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-23bar1-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2>ORENSE</h2>
+</div>
+<div class="bloque_proyecto">
+<h2>PLANICIE DE HUARAL</h2>
+<div>
+<h3>Etapa 1<br>T: <b>575</b>, D: <b style="color: #4CAF50">46</b>, V: <b style="color: #2196F3">529</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-25bar1-chart"></div>
+</div>
+<div>
+<h3>Etapa 2<br>T: <b>781</b>, D: <b style="color: #4CAF50">307</b>, V: <b style="color: #2196F3">474</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-25bar2-chart"></div>
+</div>
+<div>
+<h3>Etapa 3<br>T: <b>826</b>, D: <b style="color: #4CAF50">463</b>, V: <b style="color: #2196F3">363</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-25bar3-chart"></div>
+</div>
+</div>
+<div class="bloque_proyecto">
+<h2></h2>
+</div>
+<div class="bloque_proyecto">
+<h2></h2>
+</div>
+<div class="bloque_proyecto">
+<h2>SAN ANDRES</h2>
+<div>
+<h3>Etapa 1<br>T: <b>2189</b>, D: <b style="color: #4CAF50">266</b>, V: <b style="color: #2196F3">1923</b>, S: <b style="color: #FFC107">0</b>, B: <b style="color: #F44336">0</b></h3>
+<div id="morris-28bar1-chart"></div>
+</div>
+</div>
+ </div>
+
+ <script> 
+ Morris.Bar({
+element: "morris-1bar1-chart",
+data: [{apple: "H", disponibles: 9, vendidos: 19},{apple: "I", disponibles: 10, vendidos: 15},{apple: "J", disponibles: 11, vendidos: 38},{apple: "K", disponibles: 15, vendidos: 42},{apple: "L", disponibles: 2, vendidos: 23},{apple: "M", disponibles: 0, vendidos: 27},{apple: "N", disponibles: 6, vendidos: 31},{apple: "O", disponibles: 14, vendidos: 28},{apple: "P", disponibles: 36, vendidos: 34},{apple: "Q", disponibles: 41, vendidos: 8},{apple: "R", disponibles: 48, vendidos: 9},{apple: "S", disponibles: 17, vendidos: 23},{apple: "T", disponibles: 17, vendidos: 5},{apple: "A", disponibles: 26, vendidos: 21},{apple: "B", disponibles: 10, vendidos: 21},{apple: "C", disponibles: 9, vendidos: 21},{apple: "D", disponibles: 5, vendidos: 13},{apple: "E", disponibles: 14, vendidos: 17},{apple: "F", disponibles: 12, vendidos: 19},{apple: "G", disponibles: 1, vendidos: 11},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-1bar2-chart",
+data: [{apple: "D2", disponibles: 18, vendidos: 10},{apple: "O2", disponibles: 15, vendidos: 5},{apple: "E2", disponibles: 26, vendidos: 2},{apple: "P2", disponibles: 7, vendidos: 5},{apple: "F2", disponibles: 2, vendidos: 22},{apple: "Q2", disponibles: 16, vendidos: 0},{apple: "G2", disponibles: 21, vendidos: 3},{apple: "R2", disponibles: 19, vendidos: 1},{apple: "H2", disponibles: 20, vendidos: 4},{apple: "S2", disponibles: 3, vendidos: 1},{apple: "I2", disponibles: 35, vendidos: 8},{apple: "J2", disponibles: 36, vendidos: 10},{apple: "K2", disponibles: 14, vendidos: 14},{apple: "A2", disponibles: 11, vendidos: 10},{apple: "L2", disponibles: 28, vendidos: 16},{apple: "B2", disponibles: 6, vendidos: 37},{apple: "M2", disponibles: 40, vendidos: 12},{apple: "C2", disponibles: 21, vendidos: 27},{apple: "N2", disponibles: 40, vendidos: 5},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-1bar3-chart",
+data: [{apple: "E3", disponibles: 7, vendidos: 5},{apple: "F3", disponibles: 52, vendidos: 3},{apple: "G3", disponibles: 23, vendidos: 12},{apple: "H3", disponibles: 59, vendidos: 4},{apple: "I3", disponibles: 38, vendidos: 13},{apple: "J3", disponibles: 57, vendidos: 14},{apple: "K3", disponibles: 53, vendidos: 15},{apple: "A3", disponibles: 10, vendidos: 12},{apple: "L3", disponibles: 52, vendidos: 4},{apple: "B3", disponibles: 16, vendidos: 6},{apple: "M3", disponibles: 17, vendidos: 20},{apple: "C3", disponibles: 20, vendidos: 1},{apple: "N3", disponibles: 12, vendidos: 8},{apple: "D3", disponibles: 13, vendidos: 5},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-1bar4-chart",
+data: [{apple: "P4", disponibles: 48, vendidos: 10},{apple: "F4", disponibles: 66, vendidos: 5},{apple: "Q4", disponibles: 33, vendidos: 15},{apple: "G4", disponibles: 51, vendidos: 33},{apple: "R4", disponibles: 23, vendidos: 13},{apple: "H4", disponibles: 62, vendidos: 27},{apple: "S4", disponibles: 28, vendidos: 2},{apple: "I4", disponibles: 74, vendidos: 7},{apple: "T4", disponibles: 24, vendidos: 7},{apple: "J4", disponibles: 21, vendidos: 37},{apple: "K4", disponibles: 10, vendidos: 2},{apple: "A4", disponibles: 30, vendidos: 9},{apple: "L4", disponibles: 20, vendidos: 7},{apple: "B4", disponibles: 20, vendidos: 4},{apple: "M4", disponibles: 15, vendidos: 24},{apple: "C4", disponibles: 8, vendidos: 7},{apple: "N4", disponibles: 18, vendidos: 10},{apple: "D4", disponibles: 12, vendidos: 5},{apple: "O4", disponibles: 39, vendidos: 4},{apple: "E4", disponibles: 23, vendidos: 20},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-2bar1-chart",
+data: [{apple: "O1", disponibles: 0, vendidos: 2},{apple: "H1", disponibles: 0, vendidos: 1},{apple: "I1", disponibles: 0, vendidos: 2},{apple: "J1", disponibles: 0, vendidos: 2},{apple: "\u00d11", disponibles: 0, vendidos: 1},{apple: "C1", disponibles: 0, vendidos: 9},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-2bar2-chart",
+data: [{apple: "NN2", disponibles: 0, vendidos: 2},{apple: "Y2", disponibles: 0, vendidos: 4},{apple: "DD2", disponibles: 0, vendidos: 10},{apple: "EE2", disponibles: 0, vendidos: 6},{apple: "FF2", disponibles: 0, vendidos: 1},{apple: "GG2", disponibles: 0, vendidos: 7},{apple: "S2", disponibles: 0, vendidos: 3},{apple: "HH2", disponibles: 0, vendidos: 5},{apple: "\u00d12", disponibles: 0, vendidos: 3},{apple: "II2", disponibles: 0, vendidos: 1},{apple: "U2", disponibles: 0, vendidos: 1},{apple: "L2", disponibles: 0, vendidos: 1},{apple: "KK2", disponibles: 0, vendidos: 14},{apple: "C2", disponibles: 0, vendidos: 3},{apple: "LL2", disponibles: 0, vendidos: 11},{apple: "X2", disponibles: 0, vendidos: 3},{apple: "MM2", disponibles: 0, vendidos: 10},{apple: "D2", disponibles: 0, vendidos: 1},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-2bar3-chart",
+data: [{apple: "E3", disponibles: 0, vendidos: 6},{apple: "P3", disponibles: 0, vendidos: 11},{apple: "Q3", disponibles: 0, vendidos: 8},{apple: "G3", disponibles: 0, vendidos: 5},{apple: "R3", disponibles: 0, vendidos: 5},{apple: "H3", disponibles: 0, vendidos: 1},{apple: "S3", disponibles: 0, vendidos: 2},{apple: "T3", disponibles: 0, vendidos: 2},{apple: "A3", disponibles: 0, vendidos: 6},{apple: "V3", disponibles: 0, vendidos: 6},{apple: "L3", disponibles: 0, vendidos: 12},{apple: "B3", disponibles: 0, vendidos: 3},{apple: "C3", disponibles: 0, vendidos: 3},{apple: "N3", disponibles: 0, vendidos: 4},{apple: "D3", disponibles: 0, vendidos: 1},{apple: "Y3", disponibles: 0, vendidos: 1},{apple: "O3", disponibles: 0, vendidos: 7},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-2bar4-chart",
+data: [{apple: "P4", disponibles: 0, vendidos: 14},{apple: "F4", disponibles: 0, vendidos: 8},{apple: "BB4", disponibles: 0, vendidos: 5},{apple: "Q4", disponibles: 0, vendidos: 9},{apple: "G4", disponibles: 0, vendidos: 4},{apple: "R4", disponibles: 0, vendidos: 5},{apple: "H4", disponibles: 0, vendidos: 4},{apple: "S4", disponibles: 0, vendidos: 12},{apple: "I4", disponibles: 0, vendidos: 4},{apple: "T4", disponibles: 0, vendidos: 20},{apple: "J4", disponibles: 0, vendidos: 9},{apple: "\u00d14", disponibles: 0, vendidos: 19},{apple: "U4", disponibles: 0, vendidos: 13},{apple: "K4", disponibles: 0, vendidos: 16},{apple: "V4", disponibles: 0, vendidos: 15},{apple: "L4", disponibles: 0, vendidos: 16},{apple: "B4", disponibles: 0, vendidos: 3},{apple: "W4", disponibles: 0, vendidos: 9},{apple: "M4", disponibles: 0, vendidos: 11},{apple: "C4", disponibles: 0, vendidos: 4},{apple: "X4", disponibles: 0, vendidos: 9},{apple: "N4", disponibles: 0, vendidos: 9},{apple: "D4", disponibles: 0, vendidos: 13},{apple: "Y4", disponibles: 0, vendidos: 7},{apple: "O4", disponibles: 0, vendidos: 24},{apple: "E4", disponibles: 0, vendidos: 3},{apple: "AA4", disponibles: 0, vendidos: 23},{apple: "Z4", disponibles: 0, vendidos: 13},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-3bar1-chart",
+data: [{apple: "A", disponibles: 0, vendidos: 14},{apple: "B", disponibles: 0, vendidos: 15},{apple: "C", disponibles: 0, vendidos: 17},{apple: "D", disponibles: 0, vendidos: 14},{apple: "E", disponibles: 0, vendidos: 18},{apple: "F", disponibles: 0, vendidos: 17},{apple: "G", disponibles: 0, vendidos: 19},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-4bar1-chart",
+data: [{apple: "N1", disponibles: 5, vendidos: 11},{apple: "D1", disponibles: 36, vendidos: 9},{apple: "E1", disponibles: 36, vendidos: 8},{apple: "\u00d1", disponibles: 30, vendidos: 0},{apple: "A", disponibles: 15, vendidos: 13},{apple: "B", disponibles: 15, vendidos: 5},{apple: "C", disponibles: 87, vendidos: 10},{apple: "D", disponibles: 54, vendidos: 0},{apple: "F1", disponibles: 81, vendidos: 3},{apple: "E", disponibles: 23, vendidos: 1},{apple: "F", disponibles: 15, vendidos: 0},{apple: "G", disponibles: 17, vendidos: 0},{apple: "H", disponibles: 54, vendidos: 0},{apple: "I", disponibles: 36, vendidos: 1},{apple: "J", disponibles: 12, vendidos: 0},{apple: "K", disponibles: 55, vendidos: 0},{apple: "L", disponibles: 46, vendidos: 2},{apple: "M", disponibles: 33, vendidos: 0},{apple: "G1", disponibles: 10, vendidos: 3},{apple: "N", disponibles: 31, vendidos: 1},{apple: "O", disponibles: 25, vendidos: 5},{apple: "P", disponibles: 23, vendidos: 2},{apple: "Q", disponibles: 31, vendidos: 6},{apple: "R", disponibles: 53, vendidos: 0},{apple: "S", disponibles: 51, vendidos: 1},{apple: "T", disponibles: 65, vendidos: 0},{apple: "U", disponibles: 60, vendidos: 0},{apple: "V", disponibles: 72, vendidos: 0},{apple: "W", disponibles: 36, vendidos: 10},{apple: "H1", disponibles: 16, vendidos: 3},{apple: "X", disponibles: 16, vendidos: 9},{apple: "Y", disponibles: 42, vendidos: 4},{apple: "Z", disponibles: 37, vendidos: 0},{apple: "I1", disponibles: 29, vendidos: 1},{apple: "J1", disponibles: 24, vendidos: 10},{apple: "\u00d11", disponibles: 35, vendidos: 0},{apple: "K1", disponibles: 53, vendidos: 40},{apple: "A1", disponibles: 39, vendidos: 4},{apple: "L1", disponibles: 56, vendidos: 10},{apple: "B1", disponibles: 44, vendidos: 3},{apple: "M1", disponibles: 24, vendidos: 26},{apple: "C1", disponibles: 47, vendidos: 1},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-5bar1-chart",
+data: [{apple: "A", disponibles: 19, vendidos: 20},{apple: "B", disponibles: 5, vendidos: 27},{apple: "C", disponibles: 4, vendidos: 31},{apple: "D", disponibles: 4, vendidos: 6},{apple: "E", disponibles: 8, vendidos: 20},{apple: "F", disponibles: 13, vendidos: 29},{apple: "G", disponibles: 9, vendidos: 19},{apple: "H", disponibles: 9, vendidos: 20},{apple: "I", disponibles: 5, vendidos: 15},{apple: "J", disponibles: 8, vendidos: 12},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-5bar2-chart",
+data: [{apple: "F2", disponibles: 0, vendidos: 1},{apple: "I2", disponibles: 0, vendidos: 1},{apple: "J2", disponibles: 0, vendidos: 1},{apple: "K2", disponibles: 0, vendidos: 2},{apple: "A2", disponibles: 0, vendidos: 2},{apple: "k2", disponibles: 0, vendidos: 1},{apple: "C2", disponibles: 0, vendidos: 1},{apple: "D2", disponibles: 0, vendidos: 1},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-6bar1-chart",
+data: [{apple: "A", disponibles: 1, vendidos: 10},{apple: "B", disponibles: 0, vendidos: 3},{apple: "C", disponibles: 0, vendidos: 12},{apple: "D", disponibles: 0, vendidos: 13},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-7bar1-chart",
+data: [{apple: "A", disponibles: 18, vendidos: 0},{apple: "B", disponibles: 38, vendidos: 0},{apple: "C", disponibles: 19, vendidos: 1},{apple: "D", disponibles: 14, vendidos: 0},{apple: "E", disponibles: 20, vendidos: 8},{apple: "F", disponibles: 28, vendidos: 2},{apple: "G", disponibles: 30, vendidos: 3},{apple: "H", disponibles: 27, vendidos: 5},{apple: "I", disponibles: 30, vendidos: 0},{apple: "J", disponibles: 20, vendidos: 4},{apple: "K", disponibles: 20, vendidos: 5},{apple: "L", disponibles: 2, vendidos: 14},{apple: "M", disponibles: 10, vendidos: 0},{apple: "N", disponibles: 5, vendidos: 6},{apple: "O", disponibles: 4, vendidos: 11},{apple: "P", disponibles: 4, vendidos: 10},{apple: "Q", disponibles: 6, vendidos: 9},{apple: "R", disponibles: 11, vendidos: 16},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-8bar1-chart",
+data: [{apple: "\u00d1", disponibles: 1, vendidos: 0},{apple: "A", disponibles: 1, vendidos: 0},{apple: "B", disponibles: 9, vendidos: 0},{apple: "C", disponibles: 15, vendidos: 1},{apple: "D", disponibles: 17, vendidos: 0},{apple: "E", disponibles: 1, vendidos: 0},{apple: "F", disponibles: 11, vendidos: 1},{apple: "G", disponibles: 0, vendidos: 0},{apple: "H", disponibles: 11, vendidos: 0},{apple: "I", disponibles: 15, vendidos: 0},{apple: "J", disponibles: 1, vendidos: 0},{apple: "K", disponibles: 0, vendidos: 0},{apple: "L", disponibles: 11, vendidos: 0},{apple: "M", disponibles: 0, vendidos: 0},{apple: "N", disponibles: 12, vendidos: 1},{apple: "O", disponibles: 0, vendidos: 0},{apple: "P", disponibles: 0, vendidos: 0},{apple: "Q", disponibles: 1, vendidos: 0},{apple: "R", disponibles: 0, vendidos: 0},{apple: "S", disponibles: 0, vendidos: 0},{apple: "T", disponibles: 15, vendidos: 0},{apple: "U", disponibles: 10, vendidos: 0},{apple: "V", disponibles: 0, vendidos: 1},{apple: "W", disponibles: 1, vendidos: 0},{apple: "X", disponibles: 11, vendidos: 1},{apple: "Y", disponibles: 2, vendidos: 0},{apple: "Z", disponibles: 2, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-9bar1-chart",
+data: [{apple: "A", disponibles: 62, vendidos: 0},{apple: "B", disponibles: 53, vendidos: 0},{apple: "C", disponibles: 40, vendidos: 0},{apple: "D", disponibles: 38, vendidos: 0},{apple: "E", disponibles: 36, vendidos: 0},{apple: "F", disponibles: 27, vendidos: 0},{apple: "G", disponibles: 23, vendidos: 0},{apple: "H", disponibles: 27, vendidos: 0},{apple: "I", disponibles: 32, vendidos: 0},{apple: "J", disponibles: 35, vendidos: 0},{apple: "K", disponibles: 13, vendidos: 0},{apple: "L", disponibles: 4, vendidos: 0},{apple: "M", disponibles: 20, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-10bar1-chart",
+data: [{apple: "\u00d1", disponibles: 18, vendidos: 0},{apple: "A", disponibles: 50, vendidos: 0},{apple: "B", disponibles: 42, vendidos: 0},{apple: "C", disponibles: 14, vendidos: 0},{apple: "D", disponibles: 15, vendidos: 0},{apple: "E", disponibles: 48, vendidos: 0},{apple: "F", disponibles: 33, vendidos: 0},{apple: "G", disponibles: 54, vendidos: 0},{apple: "H", disponibles: 36, vendidos: 0},{apple: "I", disponibles: 23, vendidos: 0},{apple: "J", disponibles: 14, vendidos: 0},{apple: "K", disponibles: 30, vendidos: 0},{apple: "L", disponibles: 25, vendidos: 1},{apple: "M", disponibles: 12, vendidos: 0},{apple: "N", disponibles: 24, vendidos: 0},{apple: "O", disponibles: 26, vendidos: 0},{apple: "P", disponibles: 32, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-11bar1-chart",
+data: [{apple: "I", disponibles: 40, vendidos: 0},{apple: "J", disponibles: 16, vendidos: 0},{apple: "K", disponibles: 17, vendidos: 0},{apple: "L", disponibles: 13, vendidos: 0},{apple: "M", disponibles: 21, vendidos: 0},{apple: "N", disponibles: 29, vendidos: 0},{apple: "O", disponibles: 23, vendidos: 0},{apple: "P", disponibles: 24, vendidos: 0},{apple: "\u00d1", disponibles: 24, vendidos: 0},{apple: "A", disponibles: 21, vendidos: 0},{apple: "B", disponibles: 17, vendidos: 0},{apple: "C", disponibles: 16, vendidos: 0},{apple: "D", disponibles: 18, vendidos: 0},{apple: "E", disponibles: 44, vendidos: 0},{apple: "F", disponibles: 19, vendidos: 0},{apple: "G", disponibles: 28, vendidos: 0},{apple: "H", disponibles: 54, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-12bar1-chart",
+data: [{apple: "\u00d1", disponibles: 39, vendidos: 0},{apple: "A", disponibles: 33, vendidos: 0},{apple: "B", disponibles: 35, vendidos: 0},{apple: "C", disponibles: 32, vendidos: 0},{apple: "D", disponibles: 35, vendidos: 0},{apple: "E", disponibles: 14, vendidos: 0},{apple: "F", disponibles: 17, vendidos: 0},{apple: "G", disponibles: 50, vendidos: 0},{apple: "H", disponibles: 50, vendidos: 0},{apple: "I", disponibles: 23, vendidos: 0},{apple: "J", disponibles: 19, vendidos: 0},{apple: "K", disponibles: 15, vendidos: 0},{apple: "L", disponibles: 12, vendidos: 0},{apple: "M", disponibles: 15, vendidos: 0},{apple: "N", disponibles: 15, vendidos: 2},{apple: "O", disponibles: 33, vendidos: 0},{apple: "P", disponibles: 24, vendidos: 0},{apple: "Q", disponibles: 8, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-13bar1-chart",
+data: [{apple: "\u00d1", disponibles: 57, vendidos: 0},{apple: "A", disponibles: 18, vendidos: 2},{apple: "B", disponibles: 20, vendidos: 0},{apple: "C", disponibles: 26, vendidos: 0},{apple: "D", disponibles: 31, vendidos: 0},{apple: "E", disponibles: 15, vendidos: 0},{apple: "F", disponibles: 17, vendidos: 0},{apple: "G", disponibles: 37, vendidos: 0},{apple: "H", disponibles: 41, vendidos: 0},{apple: "I", disponibles: 16, vendidos: 0},{apple: "J", disponibles: 21, vendidos: 0},{apple: "K", disponibles: 48, vendidos: 0},{apple: "L", disponibles: 56, vendidos: 0},{apple: "M", disponibles: 21, vendidos: 0},{apple: "N", disponibles: 28, vendidos: 0},{apple: "O", disponibles: 46, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-16bar1-chart",
+data: [{apple: "A", disponibles: 0, vendidos: 27},{apple: "B", disponibles: 13, vendidos: 100},{apple: "C", disponibles: 4, vendidos: 8},{apple: "D", disponibles: 11, vendidos: 33},{apple: "E", disponibles: 27, vendidos: 27},{apple: "F", disponibles: 38, vendidos: 42},{apple: "G", disponibles: 39, vendidos: 9},{apple: "H", disponibles: 31, vendidos: 4},{apple: "I", disponibles: 49, vendidos: 9},{apple: "J", disponibles: 54, vendidos: 1},{apple: "K", disponibles: 81, vendidos: 9},{apple: "L", disponibles: 63, vendidos: 10},{apple: "M", disponibles: 19, vendidos: 0},{apple: "A1", disponibles: 27, vendidos: 2},{apple: "B1", disponibles: 36, vendidos: 1},{apple: "B2", disponibles: 40, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-16bar2-chart",
+data: [{apple: "B2", disponibles: 0, vendidos: 4},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-17bar1-chart",
+data: [{apple: "Q3", disponibles: 0, vendidos: 1},{apple: "\u00d1", disponibles: 43, vendidos: 49},{apple: "A", disponibles: 17, vendidos: 45},{apple: "B", disponibles: 118, vendidos: 16},{apple: "C", disponibles: 18, vendidos: 18},{apple: "D", disponibles: 44, vendidos: 5},{apple: "E", disponibles: 30, vendidos: 41},{apple: "F", disponibles: 40, vendidos: 9},{apple: "G", disponibles: 25, vendidos: 42},{apple: "H", disponibles: 75, vendidos: 39},{apple: "I", disponibles: 43, vendidos: 22},{apple: "J", disponibles: 30, vendidos: 6},{apple: "K", disponibles: 3, vendidos: 2},{apple: "L", disponibles: 11, vendidos: 0},{apple: "M", disponibles: 5, vendidos: 9},{apple: "N", disponibles: 38, vendidos: 7},{apple: "O", disponibles: 80, vendidos: 9},{apple: "P", disponibles: 10, vendidos: 23},{apple: "Q", disponibles: 0, vendidos: 157},{apple: "R", disponibles: 22, vendidos: 24},{apple: "S", disponibles: 41, vendidos: 5},{apple: "T", disponibles: 57, vendidos: 3},{apple: "U", disponibles: 92, vendidos: 7},{apple: "V", disponibles: 68, vendidos: 10},{apple: "W", disponibles: 25, vendidos: 27},{apple: "X", disponibles: 36, vendidos: 6},{apple: "Y", disponibles: 38, vendidos: 5},{apple: "Z", disponibles: 12, vendidos: 8},{apple: "QQ1", disponibles: 31, vendidos: 0},{apple: "QQ2", disponibles: 29, vendidos: 0},{apple: "QQ3", disponibles: 29, vendidos: 6},{apple: "QQ4", disponibles: 59, vendidos: 2},{apple: "QQ5", disponibles: 36, vendidos: 1},{apple: "QQ6", disponibles: 38, vendidos: 0},{apple: "QQ7", disponibles: 41, vendidos: 1},{apple: "QQ8", disponibles: 12, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-18bar1-chart",
+data: [{apple: "E1", disponibles: 5, vendidos: 39},{apple: "k", disponibles: 0, vendidos: 2},{apple: "F1", disponibles: 2, vendidos: 13},{apple: "G1", disponibles: 6, vendidos: 21},{apple: "H1", disponibles: 4, vendidos: 20},{apple: "I1", disponibles: 5, vendidos: 4},{apple: "J1", disponibles: 0, vendidos: 17},{apple: "A", disponibles: 23, vendidos: 44},{apple: "K1", disponibles: 3, vendidos: 8},{apple: "A1", disponibles: 12, vendidos: 28},{apple: "B", disponibles: 5, vendidos: 44},{apple: "C", disponibles: 2, vendidos: 23},{apple: "D", disponibles: 6, vendidos: 33},{apple: "E", disponibles: 1, vendidos: 14},{apple: "F", disponibles: 3, vendidos: 63},{apple: "G", disponibles: 23, vendidos: 35},{apple: "H", disponibles: 7, vendidos: 15},{apple: "I", disponibles: 3, vendidos: 7},{apple: "J", disponibles: 1, vendidos: 26},{apple: "K", disponibles: 0, vendidos: 8},{apple: "B1", disponibles: 3, vendidos: 25},{apple: "L", disponibles: 11, vendidos: 18},{apple: "M", disponibles: 2, vendidos: 42},{apple: "N", disponibles: 14, vendidos: 27},{apple: "O", disponibles: 19, vendidos: 5},{apple: "P", disponibles: 17, vendidos: 9},{apple: "Q", disponibles: 6, vendidos: 34},{apple: "R", disponibles: 17, vendidos: 15},{apple: "k1", disponibles: 0, vendidos: 1},{apple: "S", disponibles: 13, vendidos: 29},{apple: "T", disponibles: 20, vendidos: 21},{apple: "U", disponibles: 3, vendidos: 57},{apple: "C1", disponibles: 4, vendidos: 35},{apple: "V", disponibles: 5, vendidos: 30},{apple: "W", disponibles: 6, vendidos: 6},{apple: "X", disponibles: 3, vendidos: 19},{apple: "Y", disponibles: 8, vendidos: 40},{apple: "Z", disponibles: 6, vendidos: 44},{apple: "D1", disponibles: 7, vendidos: 39},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-19bar1-chart",
+data: [{apple: "P1", disponibles: 14, vendidos: 0},{apple: "A1", disponibles: 54, vendidos: 0},{apple: "\u00d1", disponibles: 23, vendidos: 30},{apple: "A", disponibles: 26, vendidos: 28},{apple: "B1", disponibles: 58, vendidos: 0},{apple: "B", disponibles: 33, vendidos: 24},{apple: "C", disponibles: 40, vendidos: 25},{apple: "D", disponibles: 25, vendidos: 35},{apple: "E", disponibles: 64, vendidos: 26},{apple: "F", disponibles: 52, vendidos: 30},{apple: "G", disponibles: 37, vendidos: 13},{apple: "H", disponibles: 9, vendidos: 20},{apple: "I", disponibles: 21, vendidos: 24},{apple: "J", disponibles: 35, vendidos: 21},{apple: "C1", disponibles: 24, vendidos: 0},{apple: "K", disponibles: 55, vendidos: 46},{apple: "L", disponibles: 19, vendidos: 17},{apple: "M", disponibles: 4, vendidos: 40},{apple: "N", disponibles: 8, vendidos: 13},{apple: "O", disponibles: 13, vendidos: 11},{apple: "P", disponibles: 9, vendidos: 28},{apple: "Q", disponibles: 13, vendidos: 23},{apple: "R", disponibles: 12, vendidos: 26},{apple: "V", disponibles: 0, vendidos: 1},{apple: "X", disponibles: 16, vendidos: 0},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-19bar2-chart",
+data: [{apple: "Z2", disponibles: 18, vendidos: 12},{apple: "P2", disponibles: 29, vendidos: 2},{apple: "F2", disponibles: 30, vendidos: 16},{apple: "Q2", disponibles: 39, vendidos: 3},{apple: "G2", disponibles: 19, vendidos: 22},{apple: "R2", disponibles: 29, vendidos: 0},{apple: "H2", disponibles: 58, vendidos: 10},{apple: "S2", disponibles: 13, vendidos: 0},{apple: "I2", disponibles: 36, vendidos: 2},{apple: "T2", disponibles: 54, vendidos: 1},{apple: "J2", disponibles: 12, vendidos: 2},{apple: "\u00d12", disponibles: 39, vendidos: 0},{apple: "U2", disponibles: 19, vendidos: 0},{apple: "K2", disponibles: 17, vendidos: 5},{apple: "A2", disponibles: 40, vendidos: 3},{apple: "V2", disponibles: 18, vendidos: 0},{apple: "L2", disponibles: 19, vendidos: 3},{apple: "B2", disponibles: 18, vendidos: 9},{apple: "W2", disponibles: 32, vendidos: 0},{apple: "M2", disponibles: 13, vendidos: 0},{apple: "C2", disponibles: 15, vendidos: 7},{apple: "X2", disponibles: 16, vendidos: 2},{apple: "N2", disponibles: 9, vendidos: 2},{apple: "D2", disponibles: 26, vendidos: 0},{apple: "Y2", disponibles: 31, vendidos: 2},{apple: "O2", disponibles: 35, vendidos: 9},{apple: "E2", disponibles: 22, vendidos: 5},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-19bar3-chart",
+data: [{apple: "G2", disponibles: 0, vendidos: 1},{apple: "Q3", disponibles: 15, vendidos: 13},{apple: "G3", disponibles: 7, vendidos: 4},{apple: "R3", disponibles: 12, vendidos: 5},{apple: "H3", disponibles: 31, vendidos: 5},{apple: "R4", disponibles: 0, vendidos: 2},{apple: "S3", disponibles: 16, vendidos: 6},{apple: "I3", disponibles: 36, vendidos: 3},{apple: "T3", disponibles: 16, vendidos: 7},{apple: "J3", disponibles: 19, vendidos: 0},{apple: "\u00d13", disponibles: 37, vendidos: 16},{apple: "U3", disponibles: 32, vendidos: 29},{apple: "K3", disponibles: 11, vendidos: 7},{apple: "A3", disponibles: 38, vendidos: 4},{apple: "L3", disponibles: 47, vendidos: 4},{apple: "B3", disponibles: 12, vendidos: 9},{apple: "W3", disponibles: 11, vendidos: 2},{apple: "M3", disponibles: 53, vendidos: 8},{apple: "C3", disponibles: 15, vendidos: 2},{apple: "X3", disponibles: 18, vendidos: 6},{apple: "N3", disponibles: 52, vendidos: 2},{apple: "D3", disponibles: 40, vendidos: 2},{apple: "Y3", disponibles: 15, vendidos: 5},{apple: "O3", disponibles: 4, vendidos: 5},{apple: "E3", disponibles: 38, vendidos: 0},{apple: "Z3", disponibles: 4, vendidos: 9},{apple: "P3", disponibles: 12, vendidos: 5},{apple: "F3", disponibles: 13, vendidos: 2},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-19bar4-chart",
+data: [{apple: "R4", disponibles: 37, vendidos: 29},{apple: "H4", disponibles: 43, vendidos: 0},{apple: "S4", disponibles: 9, vendidos: 5},{apple: "I4", disponibles: 34, vendidos: 1},{apple: "T4", disponibles: 11, vendidos: 6},{apple: "J4", disponibles: 50, vendidos: 9},{apple: "\u00d14", disponibles: 42, vendidos: 2},{apple: "U4", disponibles: 13, vendidos: 7},{apple: "A4", disponibles: 25, vendidos: 11},{apple: "V4", disponibles: 3, vendidos: 7},{apple: "B4", disponibles: 8, vendidos: 3},{apple: "W4", disponibles: 6, vendidos: 6},{apple: "M4", disponibles: 8, vendidos: 5},{apple: "C4", disponibles: 25, vendidos: 15},{apple: "X4", disponibles: 9, vendidos: 17},{apple: "N4", disponibles: 33, vendidos: 2},{apple: "D4", disponibles: 58, vendidos: 8},{apple: "O4", disponibles: 28, vendidos: 2},{apple: "E4", disponibles: 49, vendidos: 12},{apple: "P4", disponibles: 10, vendidos: 10},{apple: "F4", disponibles: 13, vendidos: 8},{apple: "U", disponibles: 0, vendidos: 1},{apple: "G4", disponibles: 29, vendidos: 10},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-20bar1-chart",
+data: [{apple: "T", disponibles: 6, vendidos: 47},{apple: "U", disponibles: 18, vendidos: 36},{apple: "V", disponibles: 19, vendidos: 37},{apple: "W", disponibles: 40, vendidos: 16},{apple: "X", disponibles: 39, vendidos: 19},{apple: "Y", disponibles: 23, vendidos: 35},{apple: "Z", disponibles: 1, vendidos: 14},{apple: "A1", disponibles: 2, vendidos: 14},{apple: "\u00d1", disponibles: 5, vendidos: 37},{apple: "A", disponibles: 2, vendidos: 20},{apple: "B", disponibles: 1, vendidos: 22},{apple: "C", disponibles: 5, vendidos: 17},{apple: "D", disponibles: 5, vendidos: 11},{apple: "E", disponibles: 1, vendidos: 21},{apple: "F", disponibles: 4, vendidos: 18},{apple: "G", disponibles: 6, vendidos: 16},{apple: "H", disponibles: 1, vendidos: 21},{apple: "I", disponibles: 6, vendidos: 16},{apple: "J", disponibles: 6, vendidos: 16},{apple: "K", disponibles: 7, vendidos: 35},{apple: "L", disponibles: 7, vendidos: 35},{apple: "M", disponibles: 8, vendidos: 34},{apple: "N", disponibles: 16, vendidos: 26},{apple: "O", disponibles: 5, vendidos: 39},{apple: "P", disponibles: 10, vendidos: 25},{apple: "Q", disponibles: 14, vendidos: 30},{apple: "R", disponibles: 4, vendidos: 22},{apple: "S", disponibles: 4, vendidos: 16},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-20bar2-chart",
+data: [{apple: "P2", disponibles: 8, vendidos: 1},{apple: "F2", disponibles: 27, vendidos: 53},{apple: "Q2", disponibles: 10, vendidos: 4},{apple: "G2", disponibles: 12, vendidos: 32},{apple: "R2", disponibles: 11, vendidos: 2},{apple: "H2", disponibles: 33, vendidos: 11},{apple: "S2", disponibles: 5, vendidos: 3},{apple: "I2", disponibles: 19, vendidos: 17},{apple: "J2", disponibles: 3, vendidos: 12},{apple: "\u00d12", disponibles: 6, vendidos: 7},{apple: "K2", disponibles: 0, vendidos: 17},{apple: "A2", disponibles: 3, vendidos: 21},{apple: "L2", disponibles: 3, vendidos: 13},{apple: "B2", disponibles: 0, vendidos: 9},{apple: "M2", disponibles: 8, vendidos: 10},{apple: "C2", disponibles: 14, vendidos: 11},{apple: "N2", disponibles: 12, vendidos: 7},{apple: "D2", disponibles: 25, vendidos: 21},{apple: "O2", disponibles: 5, vendidos: 1},{apple: "E2", disponibles: 32, vendidos: 33},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-20bar3-chart",
+data: [{apple: "Q3", disponibles: 4, vendidos: 1},{apple: "G3", disponibles: 8, vendidos: 28},{apple: "R3", disponibles: 0, vendidos: 6},{apple: "H3", disponibles: 11, vendidos: 25},{apple: "I3", disponibles: 2, vendidos: 4},{apple: "J3", disponibles: 26, vendidos: 15},{apple: "\u00d13", disponibles: 3, vendidos: 3},{apple: "K3", disponibles: 18, vendidos: 12},{apple: "A3", disponibles: 17, vendidos: 12},{apple: "L3", disponibles: 9, vendidos: 21},{apple: "B3", disponibles: 34, vendidos: 14},{apple: "M3", disponibles: 27, vendidos: 20},{apple: "C3", disponibles: 19, vendidos: 24},{apple: "N3", disponibles: 22, vendidos: 22},{apple: "D3", disponibles: 7, vendidos: 33},{apple: "O3", disponibles: 14, vendidos: 6},{apple: "E3", disponibles: 14, vendidos: 37},{apple: "P3", disponibles: 4, vendidos: 10},{apple: "F3", disponibles: 5, vendidos: 13},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-22bar1-chart",
+data: [{apple: "A", disponibles: 4, vendidos: 19},{apple: "B", disponibles: 0, vendidos: 29},{apple: "C", disponibles: 0, vendidos: 12},{apple: "D", disponibles: 0, vendidos: 49},{apple: "E", disponibles: 5, vendidos: 45},{apple: "F", disponibles: 5, vendidos: 43},{apple: "G", disponibles: 1, vendidos: 16},{apple: "H", disponibles: 0, vendidos: 14},{apple: "I", disponibles: 0, vendidos: 42},{apple: "J", disponibles: 2, vendidos: 28},{apple: "K", disponibles: 5, vendidos: 17},{apple: "L", disponibles: 3, vendidos: 19},{apple: "M", disponibles: 7, vendidos: 25},{apple: "N", disponibles: 2, vendidos: 30},{apple: "O", disponibles: 3, vendidos: 32},{apple: "P", disponibles: 5, vendidos: 25},{apple: "Q", disponibles: 3, vendidos: 40},{apple: "R", disponibles: 1, vendidos: 45},{apple: "S", disponibles: 4, vendidos: 17},{apple: "C1", disponibles: 2, vendidos: 48},{apple: "C2", disponibles: 3, vendidos: 35},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-23bar1-chart",
+data: [{apple: "\u00d1", disponibles: 4, vendidos: 18},{apple: "A", disponibles: 6, vendidos: 6},{apple: "B", disponibles: 4, vendidos: 8},{apple: "C", disponibles: 4, vendidos: 10},{apple: "D", disponibles: 4, vendidos: 7},{apple: "E", disponibles: 7, vendidos: 16},{apple: "F", disponibles: 6, vendidos: 16},{apple: "G", disponibles: 9, vendidos: 12},{apple: "H", disponibles: 9, vendidos: 14},{apple: "I", disponibles: 13, vendidos: 13},{apple: "J", disponibles: 10, vendidos: 12},{apple: "K", disponibles: 7, vendidos: 19},{apple: "L", disponibles: 7, vendidos: 10},{apple: "M", disponibles: 14, vendidos: 20},{apple: "N", disponibles: 6, vendidos: 6},{apple: "O", disponibles: 6, vendidos: 15},{apple: "P", disponibles: 8, vendidos: 11},{apple: "Q", disponibles: 13, vendidos: 6},{apple: "R", disponibles: 8, vendidos: 13},{apple: "S", disponibles: 7, vendidos: 13},{apple: "T", disponibles: 9, vendidos: 11},{apple: "U", disponibles: 9, vendidos: 13},{apple: "V", disponibles: 6, vendidos: 13},{apple: "W", disponibles: 7, vendidos: 27},{apple: "A1", disponibles: 4, vendidos: 13},{apple: "D1", disponibles: 0, vendidos: 4},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-25bar1-chart",
+data: [{apple: "\u00d1", disponibles: 0, vendidos: 13},{apple: "A", disponibles: 4, vendidos: 21},{apple: "B", disponibles: 2, vendidos: 28},{apple: "C", disponibles: 0, vendidos: 18},{apple: "D", disponibles: 0, vendidos: 12},{apple: "E", disponibles: 0, vendidos: 19},{apple: "F", disponibles: 1, vendidos: 11},{apple: "G", disponibles: 0, vendidos: 13},{apple: "H", disponibles: 1, vendidos: 16},{apple: "I", disponibles: 0, vendidos: 12},{apple: "J", disponibles: 0, vendidos: 16},{apple: "K", disponibles: 1, vendidos: 13},{apple: "L", disponibles: 11, vendidos: 35},{apple: "M", disponibles: 2, vendidos: 10},{apple: "N", disponibles: 0, vendidos: 15},{apple: "O", disponibles: 1, vendidos: 38},{apple: "P", disponibles: 0, vendidos: 12},{apple: "Q", disponibles: 0, vendidos: 12},{apple: "R", disponibles: 1, vendidos: 22},{apple: "S", disponibles: 0, vendidos: 14},{apple: "T", disponibles: 0, vendidos: 10},{apple: "U", disponibles: 0, vendidos: 40},{apple: "V", disponibles: 3, vendidos: 67},{apple: "W", disponibles: 2, vendidos: 55},{apple: "X", disponibles: 17, vendidos: 7},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-25bar2-chart",
+data: [{apple: "Q2", disponibles: 4, vendidos: 16},{apple: "G2", disponibles: 3, vendidos: 6},{apple: "FF2", disponibles: 16, vendidos: 12},{apple: "R2", disponibles: 15, vendidos: 5},{apple: "H2", disponibles: 6, vendidos: 11},{apple: "GG2", disponibles: 14, vendidos: 6},{apple: "S2", disponibles: 10, vendidos: 9},{apple: "HH2", disponibles: 20, vendidos: 2},{apple: "I2", disponibles: 6, vendidos: 5},{apple: "II2", disponibles: 11, vendidos: 11},{apple: "T2", disponibles: 14, vendidos: 6},{apple: "J2", disponibles: 6, vendidos: 12},{apple: "\u00d12", disponibles: 2, vendidos: 28},{apple: "JJ2", disponibles: 9, vendidos: 13},{apple: "U2", disponibles: 14, vendidos: 6},{apple: "K2", disponibles: 6, vendidos: 9},{apple: "A2", disponibles: 40, vendidos: 14},{apple: "S", disponibles: 0, vendidos: 1},{apple: "V", disponibles: 1, vendidos: 0},{apple: "KK2", disponibles: 2, vendidos: 7},{apple: "V2", disponibles: 8, vendidos: 21},{apple: "L2", disponibles: 8, vendidos: 4},{apple: "B2", disponibles: 2, vendidos: 5},{apple: "LL2", disponibles: 1, vendidos: 8},{apple: "AA2", disponibles: 0, vendidos: 14},{apple: "W2", disponibles: 10, vendidos: 10},{apple: "M2", disponibles: 6, vendidos: 10},{apple: "C2", disponibles: 12, vendidos: 21},{apple: "BB2", disponibles: 8, vendidos: 7},{apple: "X2", disponibles: 0, vendidos: 20},{apple: "N2", disponibles: 0, vendidos: 10},{apple: "D2", disponibles: 1, vendidos: 34},{apple: "CC2", disponibles: 7, vendidos: 15},{apple: "Y2", disponibles: 4, vendidos: 8},{apple: "O2", disponibles: 2, vendidos: 16},{apple: "E2", disponibles: 3, vendidos: 24},{apple: "DD2", disponibles: 15, vendidos: 7},{apple: "Z2", disponibles: 1, vendidos: 21},{apple: "P2", disponibles: 3, vendidos: 18},{apple: "F2", disponibles: 2, vendidos: 15},{apple: "EE2", disponibles: 15, vendidos: 7},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-25bar3-chart",
+data: [{apple: "R3", disponibles: 1, vendidos: 16},{apple: "H3", disponibles: 18, vendidos: 3},{apple: "S3", disponibles: 13, vendidos: 16},{apple: "I3", disponibles: 7, vendidos: 8},{apple: "T3", disponibles: 4, vendidos: 26},{apple: "J3", disponibles: 26, vendidos: 1},{apple: "\u00d13", disponibles: 11, vendidos: 25},{apple: "U3", disponibles: 1, vendidos: 14},{apple: "K3", disponibles: 12, vendidos: 22},{apple: "A3", disponibles: 17, vendidos: 7},{apple: "V3", disponibles: 18, vendidos: 5},{apple: "L3", disponibles: 19, vendidos: 11},{apple: "B3", disponibles: 36, vendidos: 6},{apple: "W3", disponibles: 40, vendidos: 3},{apple: "M3", disponibles: 14, vendidos: 20},{apple: "C3", disponibles: 42, vendidos: 2},{apple: "X3", disponibles: 29, vendidos: 22},{apple: "N3", disponibles: 5, vendidos: 9},{apple: "D3", disponibles: 63, vendidos: 3},{apple: "Y3", disponibles: 20, vendidos: 25},{apple: "O3", disponibles: 4, vendidos: 19},{apple: "E3", disponibles: 46, vendidos: 12},{apple: "P3", disponibles: 5, vendidos: 20},{apple: "F3", disponibles: 8, vendidos: 14},{apple: "Q3", disponibles: 0, vendidos: 33},{apple: "G3", disponibles: 4, vendidos: 21},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+Morris.Bar({
+element: "morris-28bar1-chart",
+data: [{apple: "P1", disponibles: 1, vendidos: 24},{apple: "F1", disponibles: 2, vendidos: 28},{apple: "k", disponibles: 0, vendidos: 3},{apple: "Q1", disponibles: 7, vendidos: 83},{apple: "G1", disponibles: 1, vendidos: 8},{apple: "R1", disponibles: 4, vendidos: 0},{apple: "H1", disponibles: 4, vendidos: 17},{apple: "H2", disponibles: 4, vendidos: 0},{apple: "AA1", disponibles: 44, vendidos: 0},{apple: "I1", disponibles: 15, vendidos: 77},{apple: "J1", disponibles: 0, vendidos: 21},{apple: "\u00d11", disponibles: 3, vendidos: 11},{apple: "K1", disponibles: 2, vendidos: 7},{apple: "A1", disponibles: 10, vendidos: 71},{apple: "\u00d1", disponibles: 3, vendidos: 18},{apple: "A", disponibles: 3, vendidos: 84},{apple: "B", disponibles: 1, vendidos: 17},{apple: "L1", disponibles: 0, vendidos: 31},{apple: "B1", disponibles: 3, vendidos: 38},{apple: "C", disponibles: 2, vendidos: 19},{apple: "D", disponibles: 5, vendidos: 62},{apple: "E", disponibles: 3, vendidos: 59},{apple: "F", disponibles: 2, vendidos: 25},{apple: "G", disponibles: 1, vendidos: 23},{apple: "H", disponibles: 4, vendidos: 52},{apple: "I", disponibles: 13, vendidos: 64},{apple: "k1", disponibles: 0, vendidos: 1},{apple: "J", disponibles: 4, vendidos: 23},{apple: "K", disponibles: 3, vendidos: 29},{apple: "L", disponibles: 2, vendidos: 17},{apple: "M1", disponibles: 3, vendidos: 10},{apple: "C1", disponibles: 1, vendidos: 36},{apple: "M", disponibles: 3, vendidos: 54},{apple: "N", disponibles: 8, vendidos: 25},{apple: "O", disponibles: 8, vendidos: 15},{apple: "P", disponibles: 9, vendidos: 10},{apple: "Q", disponibles: 7, vendidos: 52},{apple: "R", disponibles: 12, vendidos: 46},{apple: "S", disponibles: 6, vendidos: 46},{apple: "T", disponibles: 6, vendidos: 40},{apple: "U", disponibles: 5, vendidos: 53},{apple: "N1", disponibles: 5, vendidos: 13},{apple: "V", disponibles: 9, vendidos: 44},{apple: "D1", disponibles: 1, vendidos: 33},{apple: "W", disponibles: 2, vendidos: 47},{apple: "X", disponibles: 9, vendidos: 195},{apple: "Y", disponibles: 8, vendidos: 99},{apple: "Z", disponibles: 10, vendidos: 124},{apple: "O1", disponibles: 5, vendidos: 60},{apple: "E1", disponibles: 3, vendidos: 9},],
+xkey: "apple",
+ykeys: ["disponibles", "vendidos"],
+labels: ["Disponibles", "Vendidos"],
+barColors: ["#4CAF50", "#2196F3"],
+xLabelAngle: 45
+})
+ </script>
+ </body>
+</html>
